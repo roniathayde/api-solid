@@ -13,7 +13,7 @@ export async function register(request: FastifyRequest, reply: FastifyReply) {
   })
 
   const { name, email, password } = registerBodySchema.parse(request.body)
-
+  console.log('test')
   try {
     const usersRepository = new PrismaUsersRepository()
     const registerUseCase = new RegisterUseCase(usersRepository)
