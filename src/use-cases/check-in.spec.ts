@@ -28,11 +28,6 @@ describe('Check-in use case', () => {
   })
 
   it('should not be able to check in twice in the same day', async () => {
-    const { checkIn } = await sut.execute({
-      gymId: 'gym-01',
-      userId: 'user-01',
-    })
-
     await expect(() =>
       sut.execute({
         gymId: 'gym-01',
